@@ -1,0 +1,9 @@
+.databricks/
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.env
+*.csv
+.DS_Store
+__MACOSX/

@@ -1,0 +1,21 @@
+source:
+  schema: dm_analytics
+  tables:
+    policy: dm_policy_performance
+    claim: dm_claim_detail
+ 
+target:
+  schema: ws_insurance
+  tables:
+    policy_portfolio: ins_policy_portfolio
+    customer_360: ins_customer_360
+ 
+ops:
+  schema: ops
+  dq_table: dq_results
+ 
+data_version: "1.0"
+ 
+quality:
+  amount_tolerance: 1.0          # selisih pembulatan yang ditoleransi (rupiah)
+  allowed_status: [ACTIVE, LAPSED, CANCELLED, INACTIVE]

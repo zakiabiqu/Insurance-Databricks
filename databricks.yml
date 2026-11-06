@@ -1,0 +1,22 @@
+bundle:
+  name: insurance_databricks
+ 
+include:
+  - resources/*.yml
+ 
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://dbc-440f1e58-7f12.cloud.databricks.com/
+ 
+  stg:
+    workspace:
+      host: https://dbc-440f1e58-7f12.cloud.databricks.com/
+      root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
+ 
+  prd:
+    workspace:
+      host: https://dbc-440f1e58-7f12.cloud.databricks.com/
+      root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
